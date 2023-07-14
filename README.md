@@ -129,6 +129,8 @@ id | username | email                | first_name | last_name | roles
 1  | admin    | spashleyfu@gmail.com | POYING     | FU        | Admin
 
 ```
+![Screenshot from 2023-07-14 16-32-01](https://github.com/AmberFu/airflow_comic_test/assets/14798367/d340dad9-08f1-481b-951d-e1fe5fb37c54)
+
 
 Edit `**/home/pyfu/my_projects/airflow_comic_test/airflow-tutorials/webserver_config.py**`
 
