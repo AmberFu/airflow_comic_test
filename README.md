@@ -46,7 +46,8 @@ Install Crypto and Slack
 
 * [Integrating Slack Alerts in Airflow](https://medium.com/datareply/integrating-slack-alerts-in-airflow-c9dcd155105)
 * [Apache Installation Doc](https://airflow.apache.org/docs/apache-airflow/1.10.8/installation.html)
-* [How to quickly get and use a Slack API token]()
+* [How to quickly get and use a Slack API token](https://medium.com/datareply/integrating-slack-alerts-in-airflow-c9dcd155105)
+* [Fundamental Concepts](https://airflow.apache.org/docs/apache-airflow/stable/tutorial/fundamentals.html)
 
 ```
 $ conda activate airflow-tutorials
