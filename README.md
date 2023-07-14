@@ -53,7 +53,49 @@ Install Crypto and Slack
 $ conda activate airflow-tutorials
 $ pip install "apache-airflow[crypto, slack]"
 (...install for a long time)
+
+$ export AIRFLOW_HOME="$(pwd)"
+
+$ airflow db init
+/home/pyfu/anaconda3/envs/airflow-tutorials/lib/python3.6/site-packages/airflow/models/crypto.py:21 CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.6.
+DB: sqlite:////home/pyfu/my_projects/airflow_comic_test/airflow-tutorials/airflow.db
+...
+INFO  [airflow.models.dag] Sync 2 DAGs
+INFO  [airflow.models.dag] Setting next_dagrun for example_subdag_operator.section-1 to None
+INFO  [airflow.models.dag] Setting next_dagrun for example_subdag_operator.section-2 to None
+Initialization done
+
+## Run AirFlow web server
+$ airflow webserver -p 8080
+/home/pyfu/anaconda3/envs/airflow-tutorials/lib/python3.6/site-packages/sqlalchemy_utils/types/encrypted/encrypted_type.py:16 CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography. The next release of cryptography will remove support for Python 3.6.
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2023-07-14 15:29:13,264] {dagbag.py:500} INFO - Filling up the DagBag from /dev/null
+[2023-07-14 15:29:13,299] {manager.py:779} WARNING - No user yet created, use flask fab command to do it.
+[2023-07-14 15:29:13,383] {manager.py:496} INFO - Created Permission View: menu access on List Users
+[2023-07-14 15:29:13,391] {manager.py:558} INFO - Added Permission menu access on List Users to role Admin
+...
+Running the Gunicorn Server with:
+Workers: 4 sync
+Host: 0.0.0.0:8080
+Timeout: 120
+Logfiles: - -
+Access Logformat: 
+=================================================================            
+[2023-07-14 15:29:15 +0800] [22455] [INFO] Starting gunicorn 20.1.0
+[2023-07-14 15:29:15 +0800] [22455] [INFO] Listening at: http://0.0.0.0:8080 (22455)
+[2023-07-14 15:29:15 +0800] [22455] [INFO] Using worker: sync
+[2023-07-14 15:29:15 +0800] [22459] [INFO] Booting worker with pid: 22459
+[2023-07-14 15:29:15 +0800] [22460] [INFO] Booting worker with pid: 22460
+[2023-07-14 15:29:15 +0800] [22461] [INFO] Booting worker with pid: 22461
+[2023-07-14 15:29:15 +0800] [22462] [INFO] Booting worker with pid: 22462
+...
 ```
+
+Open [http://localhost:8080/](http://localhost:8080/)
 
 ### Create GitHub App API
 
